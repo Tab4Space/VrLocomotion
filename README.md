@@ -2,7 +2,7 @@
 “A Novel Approach for Virtual Locomotion Gesture Classification: Self-Teaching Vision Transformer for a Carpet-Type Tactile Sensor,” IEEE International Symposium on Mixed and Augmented Reality Adjunct (ISMAR-Adjunct), 2023 [[link]]()
 
 ### 프로젝트 개요
-1. 프로젝트 기간: 2022. 12 ~ 2022.05
+1. 프로젝트 기간: 2022. 01 ~ 2022. 02
 2. 개발 도구 및 개발 환경: </br>
     <img src="https://img.shields.io/badge/UnrealEngine-0E1128?style=for-the-badge&logo=UnrealEngine&logoColor=white"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=Windows&logoColor=white">
 
