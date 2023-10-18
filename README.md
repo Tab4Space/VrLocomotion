@@ -17,35 +17,48 @@
 <br/>
 
 **1. 캐릭터 구현**
+- Teleport, Arm-Swinging, Joy stick, Treadmill, Foot mouse, Nintendo controller 를 사용한 캐릭터 컨트롤 구현
+- 센서 프로세스에서  UDP 소켓을 사용해 캐릭터 컨트롤에 필요한 데이터를 송신하고, 캐릭터는 메시지를 수신할 때, 메시지에 포함된 명령어에 따라 움직임을 수행하거나 센서 프로세스에 필요한 정보를 송신
+<img src="./assets/BasePlayer-EventGraph_0.png">
+<br/>
 
 **2. Map 구현**
 - 맵은 약 250m 길이로 사용자는 Start 지점에서 Goal 지점까지 최단 시간 내에 도착하는 것이 목표
 - 시작과 목표 지점 사이에서 사용자의 이동에 영향을 주는 6개 구간 구현 및 배치
+- 제한 사항을 확인하는 기본 클래스를 구현하고 각 구역인 해당 클래스를 상속받아 추가 제한 사항을 구현
+- 각 구역에서 걸린 시간과 각 행동 횟수를 확인할 수 있도로 구현
 <img src="./assets/map.png">
+<img src="./assets/BP_BaseArea-EventGraph.png">
 <br/>
 
 * Belt 구역은 사용자의 움직임이 없는 경우 뒤로 밀려나기 때문에 지속적임 움직임을 요구
-<img src="./assets/map.png">
+<img src="./assets/belt.png">
+<img src="./assets/BP_ContainerBelt-EventGraph.png">
 <br/>
 
 * Ball 구역은 캐릭터를 뒤로 밀어버리는 공이 발사되므로 공을 피하면서 움직임을 요구
-<img src="./assets/map.png">
+<img src="./assets/ball.png">
 <br/>
 
 * Falling 구역은 사용자의 움직임이 Sneaking으로 구분될때 이동되도록 구현
-<img src="./assets/map.png">
+<img src="./assets/falling.png">
+<img src="./assets/BP_FallArea-EventGraph.png">
+<img src="./assets/BP_FallArea-CheckZoneAndLoco.png">
 <br/>
 
 * Push 구역은 캐릭터가 기둥에 맞으면 Push 시작 구간으로 이동되므로 기둥에 맞지 않도록 않아서 기둥을 피하는 움직임을 요구
-<img src="./assets/map.png">
+<img src="./assets/push.png">
+<img src="./assets/BP_Pusher-EventGraph.png">
 <br/>
 
 * Stairs 구역은 사용자의 움직임이 Marching으로 구분될때 이동되도록 구현
-<img src="./assets/map.png">
+<img src="./assets/stairs.png">
+<img src="./assets/BP_StairArea-CheckZoneAndLoco.png">
 <br/>
 
 * Ice 구역은 사용자의 움직임이 Sliding으로 구분될 때 이동되도록 구현
-<img src="./assets/map.png">
+<img src="./assets/ice.png">
+<img src="./assets/BP_IceArea-CheckZoneAndLoco.png">
 <br/>
 
 ### UE4 프로젝트 링크
